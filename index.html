@@ -4,13 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaveiro Canoas</title>
-  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            padding-top: 140px; /* Espaço para o topo fixo não cobrir o conteúdo */
+        }
+
+        /* Topo Fixo */
+        .topo-fixo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+            border-bottom: 5px solid #fad201; /* Amarelo Gold */
+        }
+
+        .topo-fixo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Conteúdo Principal */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 6px solid #004691; /* Azul Gold */
+        }
+
+        .mascote {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #004691;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Botão de Ação Central */
+        .btn-principal {
+            display: inline-block;
+            background-color: #004691;
+            color: #ffffff;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 70, 145, 0.3);
+        }
+
+        .btn-principal:hover {
+            background-color: #fad201;
+            color: #004691;
+            transform: translateY(-2px);
+        }
+
+        /* Botão Fixo do WhatsApp - Inferior Esquerdo */
+        .whatsapp-fixo {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-fixo:hover {
+            transform: scale(1.05);
+            background-color: #20ba5a;
+        }
+
+        .whatsapp-fixo svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 100px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .whatsapp-fixo {
+                bottom: 15px;
+                left: 15px;
+                padding: 12px 18px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-      <footer>
-        <p>&copy; 2026 Chaveiro Canoas - Todos os direitos reservados.</p>
-    </footer>
+    <!-- Banner do Topo Fixo -->
+    <header class="topo-fixo">
+        <!-- Substitua 'image_SujvPc.png' pelo nome do arquivo da imagem horizontal do topo -->
+        <img src="image_SujvPc.png" alt="Chaveiro Canoas Topo">
+    </header>
+
+    <!-- Seção de Conteúdo da Página -->
+    <main class="container">
+        <div class="card">
+            <!-- Substitua 'image_D6Bv2r.png' pelo nome do arquivo do mascote do chaveiro -->
+            <img src="image_D6Bv2r.png" alt="Chaveiro Mascote" class="mascote">
+            
+            <h1>Atendimento Rápido 24h</h1>
+            <p>Precisa de um chaveiro em Canoas e região? Estamos prontos para te atender com agilidade e total segurança.</p>
+            
+            <a href="https://wa.me" target="_blank" class="btn-principal">
+                Solicitar Orçamento
+            </a>
+        </div>
+    </main>
+
+    <!-- Botão Fixo no Canto Inferior Esquerdo -->
+    <a href="https://wa.me" class="whatsapp-fixo" target="_blank">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.42 1.452 5.383 0 9.763-4.377 9.766-9.76.002-2.607-1.013-5.059-2.859-6.904C17.078 2.097 14.624 1.082 12.01 1.082c-5.388 0-9.769 4.377-9.771 9.76-.001 2.01.525 3.975 1.524 5.73l-.991 3.618 3.704-.972zm11.233-6.626c-.3-.15-1.771-.875-2.04-.972-.27-.099-.467-.15-.663.15-.196.3-.757.945-.929 1.144-.171.199-.343.224-.643.075-.3-.15-1.267-.467-2.414-1.492-.893-.797-1.496-1.782-1.672-2.08-.176-.3-.019-.462.13-.61.135-.133.3-.349.45-.523.15-.174.2-.3.3-.498.1-.199.05-.374-.025-.523-.075-.15-.663-1.597-.909-2.186-.24-.575-.483-.497-.663-.506-.171-.008-.368-.01-.565-.01-.197 0-.518.074-.79.373-.272.299-1.037 1.013-1.037 2.47 0 1.457 1.061 2.864 1.21 3.062.149.198 2.088 3.193 5.058 4.477.706.305 1.258.487 1.687.625.71.226 1.356.194 1.866.118.569-.085 1.771-.724 2.02-1.417.247-.693.247-1.288.173-1.417-.074-.129-.272-.204-.572-.355z"/>
+        </svg>
+        Fale Conosco
+    </a>
 
 </body>
 </html>
